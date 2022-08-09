@@ -13,9 +13,10 @@ function Details({route, navigation}) {
     var currencies:string = Object.values(data.paises.currencies)[0];
     var nativeName:string = Object.values(data.paises.name.nativeName)[0];
 
+ 
+
 
     if (data.paises.borders !== undefined){
-
     return (
         <SafeAreaView style={styles.containerb}>
     <View>
@@ -35,18 +36,53 @@ function Details({route, navigation}) {
  </View>
 
 <View  style={styles.componentsb}>
+  
     <Text style={styles.title}>{data.paises.name.common}</Text>
-    <Text style={styles.textw}>Native Name: {nativeName.official}</Text>
-    <Text style={styles.textw}>Population: {data.paises.population}</Text>
-    <Text style={styles.textw}>Region: {data.paises.region}</Text>
-    <Text style={styles.textw}>Sub Region: {data.paises.subregion}</Text>
-    <Text style={styles.textw}>Capital: {data.paises.capital}</Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Native Name: </Text>
+      {nativeName.common}
+    </Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Population: </Text>
+    {data.paises.population}
+    </Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Region: </Text>
+    {data.paises.region}
+    </Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Sub Region: </Text>
+    {data.paises.subregion}
+    </Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Capital: </Text>
+    {data.paises.capital}
+    </Text>
+
 </View>
 
 <View  style={styles.componentsb}>
-    <Text style={styles.textw}>Top Level Domain:</Text>
-    <Text style={styles.textw}>Currencies: {currencies.name}</Text>
-    <Text style={styles.textw}>Languages: {languages}</Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Top Level Domain: </Text>
+    {data.paises.tld[0]}
+    </Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Currencies: </Text>
+    {currencies.name}
+    </Text>
+
+    <Text  style={styles.textw}>
+    <Text style={styles.subtitle}>Languages: </Text>
+    {languages}
+    </Text>
+    
 </View>
 
 <View  style={styles.componentsb}>
@@ -82,19 +118,54 @@ else{
       <Image style={styles.images} source={{uri:data.paises.flags.png}}/>
  </View>
 
-<View  style={styles.componentsb}>
-    <Text style={styles.title}>{data.paises.name.common}</Text>
-    <Text style={styles.textw}>Native Name: {nativeName.official}</Text>
-    <Text style={styles.textw}>Population: {data.paises.population}</Text>
-    <Text style={styles.textw}>Region: {data.paises.region}</Text>
-    <Text style={styles.textw}>Sub Region: {data.paises.subregion}</Text>
-    <Text style={styles.textw}>Capital: {data.paises.capital}</Text>
+ <View  style={styles.componentsb}>
+  
+  <Text style={styles.title}>{data.paises.name.common}</Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Native Name: </Text>
+    {nativeName.common}
+  </Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Population: </Text>
+  {data.paises.population}
+  </Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Region: </Text>
+  {data.paises.region}
+  </Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Sub Region: </Text>
+  {data.paises.subregion}
+  </Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Capital: </Text>
+  {data.paises.capital}
+  </Text>
+
 </View>
 
 <View  style={styles.componentsb}>
-    <Text style={styles.textw}>Top Level Domain:</Text>
-    <Text style={styles.textw}>Currencies: {currencies.name}</Text>
-    <Text style={styles.textw}>Languages: {languages}</Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Top Level Domain: </Text>
+  
+  </Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Currencies: </Text>
+  {currencies.name}
+  </Text>
+
+  <Text  style={styles.textw}>
+  <Text style={styles.subtitle}>Languages: </Text>
+  {languages}
+  </Text>
+  
 </View>
 
 <View  style={styles.componentsb}>
@@ -181,22 +252,32 @@ const styles = StyleSheet.create({
   
   },
     textb: {
+      fontSize:15,
       color: 'hsl(200, 15%, 8%)',
       paddingHorizontal:30,
       paddingVertical:3,
   },
     textw: {
+        fontSize:15,
+        fontWeight:'300',
         color: 'hsl(0, 0%, 100%)',
         paddingHorizontal:30,
         paddingVertical:3,
     },
     titleb: {
+      fontSize:20,
       paddingHorizontal:30,
       fontWeight: '900',
       color: 'hsl(200, 15%, 8%)',
       marginVertical:10,
   },
+  subtitle:{
+    fontSize:14,
+    color: 'hsl(0, 0%, 100%)',
+    fontWeight: '500',
+  },
     title: {
+      fontSize:20,
       paddingHorizontal:30,
       fontWeight: '900',
       color: 'hsl(0, 0%, 100%)',
@@ -231,7 +312,7 @@ const styles = StyleSheet.create({
     images: {
        
         height:220,
-         width:320,
+         width:330,
     },
     list: {
       alignItems:'center',

@@ -93,8 +93,8 @@ if (isEnabled1 === (true)){
       <View style={styles.headerb}>
         <Text style={styles.textw}>Where in the world?</Text>
         <Switch
-      trackColor={{ false: "#FFFFFF", true: "#000000" }}
-      thumbColor={isEnabled1 ? "#FFFFFF" : "#FFFFFF"}
+      trackColor={{ false: 'hsl(207, 26%, 17%)', true: 'hsl(0, 0%, 100%)' }}
+      thumbColor={isEnabled1 ? '000000' : 'hsl(207, 26%, 17%)'}
       onValueChange={toggleSwitch1}
       value={isEnabled1}
     />
@@ -134,8 +134,8 @@ else{
       <View style={styles.header}>
         <Text style={styles.textb}>Where in the world?</Text>
         <Switch
-      trackColor={{ false: "#FFFFFF", true: "000000" }}
-      thumbColor={isEnabled1 ? "#FFFFFF" : "#FFFFFF"}
+      trackColor={{ false: 'hsl(207, 26%, 17%)', true: 'hsl(0, 0%, 100%)' }}
+      thumbColor={isEnabled1 ? '000000' : 'hsl(207, 26%, 17%)'}
       onValueChange={toggleSwitch1}
       value={isEnabled1}
     />
