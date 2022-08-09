@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'hsl(209, 23%, 22%)',
     borderColor: 'hsl(209, 23%, 22%)',
     marginLeft:30,
-   marginRight:200,
+   marginRight:30,
 
 },
 dropdown: {
@@ -285,7 +285,7 @@ dropdown: {
   backgroundColor: 'hsl(0, 0%, 100%)',
   borderColor: 'hsl(0, 0%, 100%)',
   marginLeft:30,
-  marginRight:200,
+  marginRight:30,
 
 },
   textb: {
